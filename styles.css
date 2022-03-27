@@ -1,0 +1,100 @@
+body{
+    background-color: #222;
+
+    /* height: 100vh; */
+    font-family:  'Roboto Mono', monospace;
+}
+
+.search-title{
+    color: #6702e4;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #111;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.search-wrapper {
+    padding-top: 5%;
+    height: 20%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+input{
+    font-size: 1rem;
+    width: 500px;
+    border-radius: 5px;
+    background-color: #333;
+    border: none;
+    height: 40px;
+    margin-bottom:5rem;
+    padding-left: 10px;
+    color: white;
+}
+
+input:focus, input:active, input:hover{
+    border: none;
+    outline: solid #6702e4 1px;
+}
+
+
+@media screen and (max-width: 510px){
+
+    body{
+        height: auto;
+    }
+    input{
+        width: 100%;
+    }
+
+    .user-cards{
+        width: 100%;
+    }
+    
+}
+
+.user-cards{
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.card{
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #444;
+}
+
+.card > .header{
+    margin-bottom: 0.25rem;
+    font-size: 1.6rem;
+    color:#222;
+}
+
+.card > .body {
+    color: white;
+}
+
+.card:hover{
+    transform: scaleX(1.05);
+    background-color: #6702e4;
+    transition: 0.1s ease-in-out;
+}
+
+.hide{
+    display: none;
+}
+
+.user-cards-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
